@@ -17,6 +17,9 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(custom-safe-themes
+   (quote
+    ("8db4b03b9ae654d4a57804286eb3e332725c84d7cdab38463cb6b97d5762ad26" default)))
  '(inhibit-startup-screen t)
  '(show-paren-mode t))
 (custom-set-faces
@@ -88,4 +91,6 @@
 (add-to-list 'load-path "~/.emacs.d/emacs-color-theme-solarized")
 (require 'color-theme)
 (require 'color-theme-solarized)
-
+(load-theme 'solarized t)
+(color-theme-initialize)
+(color-theme-solarized)
