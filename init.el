@@ -1,10 +1,6 @@
 
 
 
-(load-file (concat user-emacs-directory "/cedet/cedet-devel-load.el"))
-(load-file (concat user-emacs-directory "cedet/contrib/cedet-contrib-load.el"))
-
-
 (require 'package) ;; You might already have this line
 (add-to-list 'package-archives
 	     '("melpa-stable" . "https://stable.melpa.org/packages/") t)
