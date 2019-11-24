@@ -43,6 +43,8 @@
 (put 'overwrite-mode 'disabled t)
 ;;use spaces instead of tabs
 (setq-default indent-tabs-mode nil)
+(setq-default tab-width 2)
+(setq indent-line-function 'insert-tab)
 
 ;;Or set the title bar to show file name if available, buffer name otherwise
 (setq frame-title-format '(buffer-file-name "%f" ("%b")))
@@ -62,7 +64,8 @@
     (funcall (if insert 'insert 'message)
              (format-time-string "%a, %d %b %Y %T %Z" (current-time))))
 ;;save money on wrist surgery bills
-(global-set-key "\C-b" 'compile)	
+(global-set-key "\C-b" 'compile)
+(setq compile-command "catkin build")
 
 ;;emacs fun
 (defconst animate-n-steps 3) 
