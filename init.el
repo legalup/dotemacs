@@ -6,8 +6,18 @@
 ;; -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 ;; rustic = basic rust-mode + additions
 
-(setq package-archives '(("melpa" . "http://melpa.org/packages/")
+
+;; Added by Package.el.  This must come before configurations of
+;; installed packages.  Don't delete this line.  If you don't want it,
+;; just comment it out by adding a semicolon to the start of the line.
+;; You may delete these explanatory comments.
+(package-initialize)
+
+(setq package-archives '(("melpa-stable" . "http://stable.melpa.org/packages/")
+                         ("melpa" . "http://melpa.org/packages/")
                          ("gnu" . "http://elpa.gnu.org/packages/")))
+
+(require 'use-package)
 
 (use-package rustic
   :ensure
